@@ -29,6 +29,7 @@ class Appointment(db.Model):
         self.title = title
         self.company = company
         self.date = date
+        self.time = time
         self.user_id = user_id
 
 class AppointmentSchema(ma.Schema):
