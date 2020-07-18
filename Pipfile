@@ -6,6 +6,15 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+flask = "*"
+flask-sqlalchemy = "*"
+flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
+flask-cors = "*"
+flask-heroku = "*"
+gunicorn = "*"
+psycopg2-binary = "*"
+flask-bcrypt = "*"
 
 [requires]
 python_version = "3.8"
