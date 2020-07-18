@@ -59,11 +59,12 @@ users_schema = UserSchema(many=True)
 
 @app.route("/appointment/add", methods=["POST"])
 def add_appointment():
-    title = request.get("title")
-    company = request.get("company")
-    date = request.get("date")
-    time = request.get("time")
-    username = request.get("username")
+    post_data = request.get_json()
+    title = post_data.get("title")
+    company = post_data.get("company")
+    date = post_data.get("date")
+    time = post_data.get("time")
+    username = post_data.get("username")
 
     user_id = db.session.query(User.id).filter(User.username == username).first()
 
